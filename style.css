@@ -186,3 +186,25 @@
       display: block;
     }
   }
+
+  .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(255, 59, 63, 0.05);
+  }
+  
+  .project-image {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 59, 63, 0.2);
+  }
+  
+  .project-details {
+    flex: 1;
+    min
