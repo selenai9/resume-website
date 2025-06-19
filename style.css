@@ -57,6 +57,16 @@
     animation: fadeInUp 1.5s ease both;
   }
   
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #ff3b3f;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(255, 59, 63, 0.3);
+  }
+  
   .scroll-btn {
     display: inline-block;
     margin-top: 1em;
