@@ -208,3 +208,33 @@
   .project-details {
     flex: 1;
     min
+
+    .about-section {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        padding: 2em;
+        box-shadow: 0 0 12px rgba(255, 59, 63, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .about-section:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 20px rgba(255, 59, 63, 0.2);
+      }
+      
+      .about-section h2 {
+        font-size: 1.8rem;
+        border-bottom: 2px solid #ff3b3f;
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding-bottom: 0.3rem;
+      }
+      
+      .about-section p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #ccc;
+        text-align: justify;
+        animation: fadeInUp 1s ease both;
+      }
