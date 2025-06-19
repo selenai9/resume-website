@@ -11,23 +11,12 @@
   body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
+    background-image: url('images/dark-fabric-texture.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     color: #e0e0e0;
     line-height: 1.6;
-  }
-  
-  /* Red accent */
-  .red-accent {
-    color: #ff3b3f;
-  }
-  
-  a, button {
-    color: #ff3b3f;
-    transition: all 0.3s ease;
-  }
-  
-  a:hover, button:hover {
-    color: #ff6b6b;
-    transform: scale(1.05);
   }
   
   /* Hero */
@@ -36,7 +25,6 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +42,6 @@
   .hero-text {
     color: white;
     text-align: center;
-    animation: fadeInUp 1.5s ease both;
   }
   
   .profile-pic {
@@ -117,13 +104,81 @@
   }
   
   /* Sections */
-  section {
+  .section {
     padding: 2em;
     max-width: 900px;
     margin: 2em auto;
-    background: #1a1a1a;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 12px rgba(255, 59, 63, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(255, 59, 63, 0.2);
+  }
+  
+  .red-accent {
+    color: #ff3b3f;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ff3b3f;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .section p {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: justify;
+  }
+  
+  /* Icon list */
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+  
+  .icon-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-list li span {
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+  }
+  
+  /* Projects */
+  .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(255, 59, 63, 0.1);
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(255, 59, 63, 0.05);
+  }
+  
+  .project-image {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 59, 63, 0.2);
+  }
+  
+  .project-details {
+    flex: 1;
+    min-width: 250px;
   }
   
   /* Form */
@@ -146,95 +201,4 @@
     background: #ff3b3f;
     color: white;
     border: none;
-    border-radius: 5px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2em;
-    color: #999;
-  }
-  
-  /* Animation */
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  .section {
-    animation: fadeInUp 1s ease both;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #1e1e1e;
-      position: absolute;
-      right: 1em;
-      top: 60px;
-      padding: 1em;
-      border-radius: 6px;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-  
-    .toggle-btn {
-      display: block;
-    }
-  }
-
-  .project-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 0 10px rgba(255, 59, 63, 0.05);
-  }
-  
-  .project-image {
-    width: 300px;
-    max-width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(255, 59, 63, 0.2);
-  }
-  
-  .project-details {
-    flex: 1;
-    min
-
-    .about-section {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(6px);
-        border-radius: 12px;
-        padding: 2em;
-        box-shadow: 0 0 12px rgba(255, 59, 63, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .about-section:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 0 20px rgba(255, 59, 63, 0.2);
-      }
-      
-      .about-section h2 {
-        font-size: 1.8rem;
-        border-bottom: 2px solid #ff3b3f;
-        display: inline-block;
-        margin-bottom: 1rem;
-        padding-bottom: 0.3rem;
-      }
-      
-      .about-section p {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: #ccc;
-        text-align: justify;
-        animation: fadeInUp 1s ease both;
-      }
+    border

@@ -37,10 +37,12 @@
   <section id="about" class="section about-section">
     <h2 class="red-accent">About Me</h2>
     <hr />
-    <p>
-      I’m a tech-savvy creative passionate about sustainable fashion, design, and innovation.
-      I blend culture and technology to create impactful, artistic solutions.
-    </p>
+    <p>I’m a tech-savvy creative passionate about sustainable fashion, design, and innovation. I blend culture and technology to create impactful, artistic solutions.</p>
+    <ul class="icon-list">
+      <li><span>🎨</span> Creative Fashion Design</li>
+      <li><span>🌿</span> Sustainability Advocacy</li>
+      <li><span>💻</span> Front-End Development</li>
+    </ul>
   </section>
 
   <!-- PROJECTS -->
@@ -78,5 +80,21 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Scroll effect -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.add('scroll-section');
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
