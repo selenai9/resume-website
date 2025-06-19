@@ -20,7 +20,7 @@
     </div>
   </section>
 
-  <!-- NAVBAR -->
+  <!-- NAVIGATION -->
   <header>
     <nav class="navbar">
       <div class="logo">Selena</div>
@@ -28,12 +28,13 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#moodboard">Moodboard</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
   <section id="about" class="section about-section">
     <h2 class="red-accent">About Me</h2>
     <hr />
@@ -45,7 +46,49 @@
     </ul>
   </section>
 
-  <!-- PROJECTS -->
+  <section id="resume" class="section">
+    <h2 class="red-accent">Resume</h2>
+    <hr />
+  
+    <!-- Education -->
+    <div class="resume-group">
+      <h3>Education</h3>
+  
+      <p><strong>African Leadership University</strong> (2024–Present)<br>
+      Bachelor of Software Engineering — Exploring full-stack development, systems design, and entrepreneurship.</p>
+  
+      <p><strong>Gashora Girls Academy of Science and Technology</strong> (2020–2023)<br>
+      Advanced STEM-focused curriculum emphasizing leadership, innovation, and critical thinking.</p>
+  
+      <p><strong>FAWE Girls School – Gisozi</strong> (2017–2019)<br>
+      Foundation in science and communication with a focus on female-driven academic excellence.</p>
+    </div>
+  
+    <!-- Skills -->
+    <div class="resume-group">
+      <h3>Skills</h3>
+      <ul class="icon-list">
+        <li><span>💻</span> HTML, CSS, JavaScript, Regex, Python</li>
+        <li><span>🛠️</span> Front-end Development & Responsive Design</li>
+        <li><span>📐</span> Creative Problem Solving & Design Thinking</li>
+        <li><span>📋</span> Documentation, Git, and Project Management</li>
+        <li><span>🧠</span> Systems Thinking & Ethical Framework Analysis</li>
+      </ul>
+    </div>
+  
+    <!-- Work Experience -->
+    <div class="resume-group">
+      <h3>Experience</h3>
+  
+      <p><strong>Freelance Creative Developer</strong> (2023–Present)<br>
+      Designing and coding custom portfolio and resume websites that blend aesthetics with functionality.</p>
+  
+      <p><strong>Intern – Web Design & Sustainability Projects</strong> (2022)<br>
+      Worked on HTML/CSS prototypes for fashion-focused digital campaigns supporting upcycling initiatives.</p>
+    </div>
+  </section>
+  
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="section">
     <h2 class="red-accent">Projects</h2>
     <hr />
@@ -58,7 +101,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="section">
     <h2 class="red-accent">Contact Me</h2>
     <form onsubmit="return validateForm()">
@@ -75,13 +118,13 @@
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Selena Isimbi. All rights reserved.</p>
   </footer>
 
+  <!-- JS + Scroll Reveal -->
   <script src="script.js"></script>
-
-  <!-- Scroll effect -->
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

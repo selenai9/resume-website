@@ -202,3 +202,19 @@
     color: white;
     border: none;
     border
+    
+    .resume-group {
+      margin-bottom: 2rem;
+    }
+    
+    .resume-group h3 {
+      color: #ff3b3f;
+      margin-bottom: 0.8rem;
+    }
+    
+    .resume-group p,
+    .resume-group ul {
+      margin-left: 1em;
+      font-size: 1rem;
+      color: #ccc;
+    }
