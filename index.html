@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-overlay">
       <div class="hero-text">
@@ -24,71 +24,53 @@
   <header>
     <nav class="navbar">
       <div class="logo">Selena</div>
-      <button class="toggle-btn">☰</button>
+      <button id="menu-toggle" class="toggle-btn">☰</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#moodboard">Moodboard</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section about-section">
+  <!-- ABOUT -->
+  <section id="about" class="section">
     <h2 class="red-accent">About Me</h2>
     <hr />
-    <p>I’m a tech-savvy creative passionate about sustainable fashion, design, and innovation. I blend culture and technology to create impactful, artistic solutions.</p>
-    <ul class="icon-list">
-      <li><span>🎨</span> Creative Fashion Design</li>
-      <li><span>🌿</span> Sustainability Advocacy</li>
-      <li><span>💻</span> Front-End Development</li>
-    </ul>
+    <p>I’m a tech-savvy creative passionate about sustainable fashion, digital design, and innovation. I use both code and culture to tell stories that resonate and inspire.</p>
   </section>
 
+  <!-- RESUME -->
   <section id="resume" class="section">
     <h2 class="red-accent">Resume</h2>
     <hr />
-  
-    <!-- Education -->
+
     <div class="resume-group">
       <h3>Education</h3>
-  
-      <p><strong>African Leadership University</strong> (2024–Present)<br>
-      Bachelor of Software Engineering — Exploring full-stack development, systems design, and entrepreneurship.</p>
-  
-      <p><strong>Gashora Girls Academy of Science and Technology</strong> (2020–2023)<br>
-      Advanced STEM-focused curriculum emphasizing leadership, innovation, and critical thinking.</p>
-  
-      <p><strong>FAWE Girls School – Gisozi</strong> (2017–2019)<br>
-      Foundation in science and communication with a focus on female-driven academic excellence.</p>
+      <p><strong>African Leadership University</strong> (2024–Present)<br>Bachelor of Software Engineering</p>
+      <p><strong>Gashora Girls Academy</strong> (2020–2023)<br>STEM + Leadership focus</p>
+      <p><strong>FAWE Girls School – Gisozi</strong> (2017–2019)</p>
     </div>
-  
-    <!-- Skills -->
+
     <div class="resume-group">
       <h3>Skills</h3>
       <ul class="icon-list">
         <li><span>💻</span> HTML, CSS, JavaScript, Regex, Python</li>
-        <li><span>🛠️</span> Front-end Development & Responsive Design</li>
-        <li><span>📐</span> Creative Problem Solving & Design Thinking</li>
-        <li><span>📋</span> Documentation, Git, and Project Management</li>
-        <li><span>🧠</span> Systems Thinking & Ethical Framework Analysis</li>
+        <li><span>🎨</span> Creative Design, Figma, Canva</li>
+        <li><span>🛠️</span> Responsive Layouts & Accessibility</li>
+        <li><span>🔎</span> Documentation & Git Version Control</li>
       </ul>
     </div>
-  
-    <!-- Work Experience -->
+
     <div class="resume-group">
       <h3>Experience</h3>
-  
-      <p><strong>Freelance Creative Developer</strong> (2023–Present)<br>
-      Designing and coding custom portfolio and resume websites that blend aesthetics with functionality.</p>
-  
-      <p><strong>Intern – Web Design & Sustainability Projects</strong> (2022)<br>
-      Worked on HTML/CSS prototypes for fashion-focused digital campaigns supporting upcycling initiatives.</p>
+      <p><strong>Freelance Developer</strong> (2023–Present)<br>Building personal websites and creative portfolios</p>
+      <p><strong>Intern – Digital Campaigns</strong> (2022)<br>Worked on HTML/CSS for upcycled fashion projects</p>
     </div>
   </section>
-  
-  <!-- PROJECTS SECTION -->
+
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <h2 class="red-accent">Projects</h2>
     <hr />
@@ -96,23 +78,23 @@
       <img src="images/bag-project.jpg" alt="Upcycled Denim Bag" class="project-image" />
       <div class="project-details">
         <h3>Upcycled Denim Bag</h3>
-        <p>Designed and crafted a stylish bag from reworked Levi’s jeans as part of a sustainability-focused fashion line.</p>
+        <p>Reworked denim into a functional, wearable bag with a clean code-based portfolio section to present it online.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <h2 class="red-accent">Contact Me</h2>
-    <form onsubmit="return validateForm()">
+    <form>
       <label for="name">Name</label>
-      <input type="text" id="name" />
+      <input type="text" id="name" required />
 
       <label for="email">Email</label>
-      <input type="email" id="email" />
+      <input type="email" id="email" required />
 
       <label for="message">Message</label>
-      <textarea id="message" rows="4"></textarea>
+      <textarea id="message" rows="4" required></textarea>
 
       <button type="submit">Send</button>
     </form>
@@ -123,9 +105,9 @@
     <p>© 2025 Selena Isimbi. All rights reserved.</p>
   </footer>
 
-  <!-- JS + Scroll Reveal -->
-  <script src="script.js"></script>
+  <!-- SCRIPTS -->
   <script>
+    // Scroll animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -138,6 +120,14 @@
       section.classList.add('scroll-section');
       observer.observe(section);
     });
+
+    // Mobile nav toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
+
 </body>
 </html>
